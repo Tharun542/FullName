@@ -41,7 +41,7 @@ export default function FullName() {
         />
       </div>
 
-      <button type="next">Next</button>
+      <button type="submit">Submit</button>
 
       {selectedName && <h1>Full Name : {selectedName}</h1>}
     </form>
