@@ -18,6 +18,7 @@ export default function FullName() {
 
   return (
     <form className="form" onSubmit={handleName} >
+        <h1>Full Name Display</h1>
       <div>
         <label>First Name</label>
         <input
@@ -40,9 +41,9 @@ export default function FullName() {
         />
       </div>
 
-      <button type="submit">Submit</button>
+      <button type="next">Next</button>
 
-      {selectedName && <h1>FULLNAME : {selectedName}</h1>}
+      {selectedName && <h1>Full Name : {selectedName}</h1>}
     </form>
   );
 }
