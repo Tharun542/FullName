@@ -9,11 +9,13 @@ export default function FullName(){
     
   const handleName=(e)=>{
     e.preventDefault();
+    const first = fname.trim();
+    const last = lname.trim();
     if(!fname || !lname){
-     alert("please fill the field")
+     setSelectedName("")
      return;
     }
-    setSelectedName(fname +" "+ lname);
+    setSelectedName(first+ " "+ last);
   }
    
 
