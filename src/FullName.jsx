@@ -9,19 +9,15 @@ export default function FullName() {
   const handleName = (e) => {
     e.preventDefault();
 
-    const first = fname.trim();
-    const last = lname.trim();
-
-    if (!first || !last) {
+    if (!fname && !lname) {
       setSelectedName("");
       return;
     }
-
-    setSelectedName(first + " " + last);
+    setSelectedName(fname +" "+ lname);
   };
 
   return (
-    <form className="form" onSubmit={handleName} noValidate>
+    <form className="form" onSubmit={handleName} >
       <div>
         <label>First Name</label>
         <input
@@ -29,6 +25,7 @@ export default function FullName() {
           placeholder="First Name"
           value={fname}
           onChange={(e) => setFname(e.target.value)}
+          required
         />
       </div>
 
@@ -39,6 +36,7 @@ export default function FullName() {
           placeholder="Last Name"
           value={lname}
           onChange={(e) => setLname(e.target.value)}
+          required
         />
       </div>
 
